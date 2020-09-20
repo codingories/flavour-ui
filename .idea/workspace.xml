@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="53612160-8eea-4ebc-80be-0da6f8976cea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Topnav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Topnav.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +65,7 @@
       <workItem from="1600573967705" duration="479000" />
       <workItem from="1600574713137" duration="1896000" />
       <workItem from="1600605801291" duration="121000" />
-      <workItem from="1600608658332" duration="1400000" />
+      <workItem from="1600608658332" duration="1472000" />
     </task>
     <servers />
   </component>
