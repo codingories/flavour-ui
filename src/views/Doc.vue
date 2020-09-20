@@ -2,7 +2,6 @@
   <div>
     <Topnav></Topnav>
     <div class="content">
-      <aside>边栏</aside>
       <aside v-if="menuVisible">
         <h2>组件列表</h2>
         <ol>
@@ -30,7 +29,7 @@
   export default {
     components: { Topnav },
     setup(){
-      const menuVisible =  inject<Ref<boolean>>('xxx'); // get
+      const menuVisible =  inject<Ref<boolean>>('menuVisible'); // get
       console.log('topnav 获取的 menu Visible 为: ' + menuVisible.value)
       return {menuVisible}
     }

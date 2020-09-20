@@ -8,7 +8,7 @@ export default {
   name: 'App',
   setup(){
     const menuVisible = ref(false); //  ref理解成盒子,里面有个值false
-    provide('xxx', menuVisible) // set,标记为所有子组件都可以用
+    provide('menuVisible', menuVisible) // set,标记为所有子组件都可以用
   }
 }
 </script>
