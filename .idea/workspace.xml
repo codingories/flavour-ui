@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53612160-8eea-4ebc-80be-0da6f8976cea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Frank.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Frank2.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shims-vue.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +62,7 @@
       <updated>1600572450778</updated>
       <workItem from="1600572455038" duration="1089000" />
       <workItem from="1600573967705" duration="479000" />
-      <workItem from="1600574713137" duration="231000" />
+      <workItem from="1600574713137" duration="1395000" />
     </task>
     <servers />
   </component>
