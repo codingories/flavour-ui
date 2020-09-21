@@ -16,6 +16,7 @@
       const menuVisible =  inject<Ref<boolean>>('menuVisible'); // get, 获取xxx
       const toggleMenu = ()=>{
         menuVisible.value = !menuVisible.value
+        console.log('fuck',menuVisible.value)
       };
       return {toggleMenu}
     }
