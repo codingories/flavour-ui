@@ -70,7 +70,7 @@
       <workItem from="1600608658332" duration="3995000" />
       <workItem from="1600615175568" duration="418000" />
       <workItem from="1600689928428" duration="1679000" />
-      <workItem from="1601727221214" duration="1578000" />
+      <workItem from="1601727221214" duration="2215000" />
     </task>
     <servers />
   </component>
@@ -89,16 +89,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/lib/Switch.vue</url>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
