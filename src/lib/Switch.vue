@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button :class="{checked: x}"><span></span> </button>
+    <button @click="toggle" :class="{checked}"><span></span> </button>
   </div>
 </template>
 
@@ -8,8 +8,11 @@
   import { ref } from 'vue'
   export default {
     setup(){
-      const x = ref(false); // 默认x没有选中, true和false决定是否有checked类
-      return {x}
+      const checked = ref(false); // 默认x没有选中, true和false决定是否有checked类
+      const toggle = ()=>{
+        checked.value = !checked.value
+      }
+      return {checked, toggle}
     }
   }
 </script>
