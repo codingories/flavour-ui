@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Switch v-model:value="y" ></Switch>
+    <Switch v-model:value="bool" ></Switch>
     <!--   v-model等于就是简化了这句话 @update:value="y = $event"-->
   </div>
 </template>
@@ -10,8 +10,8 @@
   export default {
     components: {Switch},
     setup(){
-      const y = ref(false);
-      return {y}
+      const bool = ref(false);
+      return {bool}
       // 给value 默认值y ，y为true ，
     }
   }
