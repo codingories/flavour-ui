@@ -7,8 +7,8 @@
               @focus="onClick"
               @mouseover="onClick"
               size="small"
+              disabled
       >你好</Button>
-<!--      Vue 直接帮我们把onClick传到了根元素-->
     </div>
   </div>
 </template>
