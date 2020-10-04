@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53612160-8eea-4ebc-80be-0da6f8976cea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/SwitchDemo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SwitchDemo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Switch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Switch.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +71,7 @@
       <workItem from="1600615175568" duration="418000" />
       <workItem from="1600689928428" duration="1679000" />
       <workItem from="1601727221214" duration="4465000" />
-      <workItem from="1601777514817" duration="635000" />
+      <workItem from="1601777514817" duration="740000" />
     </task>
     <servers />
   </component>
