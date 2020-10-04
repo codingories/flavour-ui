@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Switch :value="y" @input="y = $event"></Switch>
+    <Switch v-model:value="y" ></Switch>
+
+<!--    @update:value="y = $event"-->
 <!--    @input表示变化的时候让y为最新的值, 最新的值就是$event-->
   </div>
 </template>
