@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53612160-8eea-4ebc-80be-0da6f8976cea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/Button.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Switch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Switch.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonDemo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonDemo.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,7 @@
       <workItem from="1600689928428" duration="1679000" />
       <workItem from="1601727221214" duration="4465000" />
       <workItem from="1601777514817" duration="1030000" />
-      <workItem from="1601779905081" duration="381000" />
+      <workItem from="1601779905081" duration="611000" />
     </task>
     <servers />
   </component>
