@@ -1,18 +1,39 @@
 <template>
   <button class="gulu-button"
-          :class="`gulu-theme-${theme}`"
+          :class="classes"
   >
     <slot />
   </button>
 </template>
 <script lang="ts">
+  import { computed } from 'vue';
   export default {
     props: {
       theme: {
         type:String,
         default: 'button'
+      },
+      size: {
+        type: String,
+        default: 'normal'
       }
     },
+    setup(props){
+      const {theme,size} = props
+      const classes = computed(()=>{
+        // Vue3的计算属性
+        console.log('arg',
+          { [`gulu-theme-${theme}`]: theme,
+            [`gulu-theme-${size}`]: size}
+        )
+        return {
+          [`gulu-theme-${theme}`]: theme,
+          [`gulu-size-${size}`]: size
+        }
+      })
+      return {classes}
+      // 注意:这个地方的要加return 不能忘记
+    }
   };
 </script>
 <style lang="scss">
@@ -68,6 +89,18 @@
       color: inherit;
       &:hover,&:focus{
         background: darken(white, 5%);;
+      }
+    }
+    &.gulu-theme-button{
+      &.gulu-size-big{
+        font-size: 24px;
+        height: 48px;
+        padding: 0 16px
+      }
+      &.gulu-size-small{
+        font-size: 12px;
+        height: 20px;
+        padding: 0 4px;
       }
     }
   }
