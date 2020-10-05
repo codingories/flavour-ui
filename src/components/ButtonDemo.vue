@@ -53,7 +53,8 @@
   <h1>示例5</h1>
   <div>
     <Button loading>加载中</Button>
-  </div>
+    <Button>加载完毕</Button>
+  </div>s
 </template>
 <script lang="ts">
   import Button from "../lib/Button.vue";
