@@ -1,9 +1,8 @@
-
 <template>
   <div>Button 示例</div>
   <h1>示例1</h1>
   <div>
-    <Button>你好</Button>
+    <Button @click="onClick">你好</Button>
     <Button theme="button">你好</Button>
     <Button theme="link">你好</Button>
     <Button theme="text">你好</Button>
@@ -51,10 +50,10 @@
     <Button theme="text" disabled>禁用按钮</Button>
   </div>
   <h1>示例5</h1>
-  <div>
+  <div class="wrapper">
     <Button loading>加载中</Button>
     <Button>加载完毕</Button>
-  </div>s
+  </div>
 </template>
 <script lang="ts">
   import Button from "../lib/Button.vue";
@@ -68,3 +67,9 @@
     },
   };
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  display: flex;
+}
+</style>
