@@ -9,6 +9,7 @@ export const openDialog = (options)=>{
     app.unmount(div)
     div.remove()
   }
+  console.log('title, content',title, content)
   const app = createApp({
     render(){
       return h(Dialog, {visible: true,
