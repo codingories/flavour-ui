@@ -47,21 +47,16 @@
       }
       const onClickOverlay = ()=>{
         if(props.closeOnClickOverlay){
-          // 开启才可以点外面关闭
           close()
         }
       }
       const ok = ()=>{
-        // context.emit('ok')
         if(props.ok?.() !== false){
           close()
         }
       }
       const cancel = ()=>{
-        // if(props.cancel?.() !== false) {
-        // }
         props.cancel?.()
-        // context.emit('cancel')
         close()
       }
       return {
