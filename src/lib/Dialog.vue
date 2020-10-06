@@ -17,7 +17,6 @@
     </div>
   </template>
 </template>
-
 <script lang="ts">
   import Button from "./Button.vue";
   export default {
@@ -47,7 +46,6 @@
         context.emit('update:visible', false)
       }
       const onClickOverlay = ()=>{
-        console.log('props.closeOnClickOverlay', props.closeOnClickOverlay)
         if(props.closeOnClickOverlay){
           // 开启才可以点外面关闭
           close()
@@ -58,14 +56,11 @@
         if(props.ok?.() !== false){
           close()
         }
-
-
       }
       const cancel = ()=>{
         context.emit('cancel')
         close()
       }
-
       return {
         close, onClickOverlay, ok, cancel
       }

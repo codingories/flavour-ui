@@ -4,7 +4,7 @@
     <h1>示例1</h1>
     <Button @click="toggle">toggle</Button>
     <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2"></Dialog>
-<!--    @update:visible="x = $event"-->
+<!--    v-model简写了: @update:visible="x = $event"-->
   </div>
 </template>
 <script lang="ts">
@@ -22,6 +22,7 @@ import {ref} from 'vue'
       }
       const f1 = ()=>{
         return false
+        // return false 就让ok关不掉
       }
       const f2 = ()=>{}
       return {x, toggle, f1, f2}
