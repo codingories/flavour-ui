@@ -58,7 +58,10 @@
         }
       }
       const cancel = ()=>{
-        context.emit('cancel')
+        // if(props.cancel?.() !== false) {
+        // }
+        props.cancel?.()
+        // context.emit('cancel')
         close()
       }
       return {
