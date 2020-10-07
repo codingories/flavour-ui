@@ -2,8 +2,8 @@
   <div>
     Tabs 示例
     <h1>示例1</h1>
-    <Tabs>
-      <div title="导航1">内容1</div>
+    <Tabs selected="导航1">
+      <Tab title="导航1" selected>内容1</Tab>
       <Tab title="导航2">内容2</Tab>
     </Tabs>
   </div>
