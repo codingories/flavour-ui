@@ -1,8 +1,12 @@
 <template>
   <div class="gulu-tabs">
     <div class="gulu-tabs-nav">
-      <div class="gulu-tabs-nav-item" :class="{selected: t===selected}" v-for="(t,index) in titles" :key="index" @click="select(t)">{{t}}</div>
-      <div class="gulu-tabs-nav-indicator"></div>
+      <div class="gulu-tabs-nav-item" :class="{selected: t===selected}" v-for="(t,index) in titles"
+           :ref="el => { if (el) navItems [index] = el}"
+           :key="index" @click="select(t)">{{t}}</div>
+<!--      :ref="el => { if (el) navItems [index] = el}" ,这句话的意思是如果当前元素存在就让navItems的第index个=el-->
+
+      <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="gulu-tabs-content">
       <component class="gulu-tabs-content-item"  :is="current" :key="current.props.title"/>
@@ -11,7 +15,7 @@
 </template>
 <script lang="ts">
   import Tab from './Tab.vue'
-  import { computed } from 'vue'
+  import { computed,ref, onMounted } from 'vue'
   export default {
     props: {
       selected:{
@@ -19,7 +23,14 @@
       }
     },
     setup(props, context){
-      console.log('props', props);
+      const navItems = ref<HTMLDivElement>([]);
+      const indicator = ref<HTMLDivElement>(null);
+      onMounted(()=>{
+        const divs:any = navItems.value;
+        const result = divs.filter(div=>div.classList.contains('selected'))[0];
+        const {width} = result.getBoundingClientRect();
+        indicator.value.style.width = width + 'px'
+      });
       const defaults = context.slots.default();
       defaults.forEach((tag)=>{
         if(tag.type !== Tab){
@@ -30,7 +41,7 @@
         return defaults.filter((tag)=>{
           return tag.props.title === props.selected
         })[0];
-      })
+      });
       const titles = defaults.map((tag)=>{
         return tag.props.title
       });
@@ -38,7 +49,7 @@
         context.emit('update:selected', title)
       };
       return {
-        defaults,select,current, titles
+        defaults, select, current, titles, navItems, indicator
       }
     }
   }
