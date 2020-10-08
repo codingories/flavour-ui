@@ -1,15 +1,17 @@
 <template>
   <div class="gulu-tabs">
     <div class="gulu-tabs-nav">
-      <div class="gulu-tabs-nav-item" :class="{selected: t===selected}" v-for="(t,index) in titles" :key="index">{{t}}</div>
+      <div class="gulu-tabs-nav-item" :class="{selected: t===selected}" v-for="(t,index) in titles" :key="index" @click="select(t)">{{t}}</div>
+      <div class="gulu-tabs-nav-indicator"></div>
     </div>
     <div class="gulu-tabs-content">
-      <component class="gulu-tabs-content-item" v-for="(c,index) in defaults" :is="c" :key="index" />
+      <component class="gulu-tabs-content-item"  :is="current" :key="current.props.title"/>
     </div>
   </div>
 </template>
 <script lang="ts">
   import Tab from './Tab.vue'
+  import { computed } from 'vue'
   export default {
     props: {
       selected:{
@@ -17,20 +19,26 @@
       }
     },
     setup(props, context){
-      // 每一个.vue文件就是一个对象
+      console.log('props', props);
       const defaults = context.slots.default();
       defaults.forEach((tag)=>{
         if(tag.type !== Tab){
           throw new Error('Tabs 子标签必须是 Tab')
         }
       });
-
+      const current = computed(()=>{
+        return defaults.filter((tag)=>{
+          return tag.props.title === props.selected
+        })[0];
+      })
       const titles = defaults.map((tag)=>{
         return tag.props.title
-      })
-      console.log(defaults[0].type === Tab);
+      });
+      const select = (title: string) => {
+        context.emit('update:selected', title)
+      };
       return {
-        defaults, titles
+        defaults,select,current, titles
       }
     }
   }
@@ -45,6 +53,7 @@
       display: flex;
       color: $color;
       border-bottom: 1px solid $border-color;
+      position: relative;
       &-item {
         padding: 8px 0;
         margin: 0 16px;
@@ -55,6 +64,14 @@
         &.selected {
           color: $blue;
         }
+      }
+      &-indicator {
+        position: absolute;
+        height: 3px;
+        background: $blue;
+        left: 0;
+        bottom: -1px;
+        width: 100px;
       }
     }
     &-content {
