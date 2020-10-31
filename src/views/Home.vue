@@ -1,14 +1,28 @@
 <template>
-  <div class="topnavAndBanner">
-    <Topnav></Topnav>
-    <div class="banner">
-      <h1>flavour UI</h1>
-      <h2>一个厉害的UI框架</h2>
-      <p class="actions">
-        <a href="https://github.com">GitHub</a>
-        <router-link to="/doc">开始</router-link>
-      </p>
+  <div>
+    <div class="topnavAndBanner">
+      <Topnav></Topnav>
+      <div class="banner">
+        <h1>flavour UI</h1>
+        <h2>一个厉害的UI框架</h2>
+        <p class="actions">
+          <a href="https://github.com">GitHub</a>
+          <router-link to="/doc">开始</router-link>
+        </p>
+      </div>
     </div>
+    <div class="features">
+      <svg class="icon">
+        <use xlink:href="#icon-vue"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-light"></use>
+      </svg>
+    </div>
+
   </div>
 </template>
 <script lang="ts">
@@ -45,6 +59,12 @@
           text-decoration: none;
         }
       }
+    }
+  }
+  .features {
+    > svg {
+      width: 64px;
+      height: 64px;
     }
   }
 </style>
