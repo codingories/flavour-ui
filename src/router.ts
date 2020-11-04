@@ -19,7 +19,9 @@ import Intro from './views/Intro.vue';
 import GetStarted from './views/GetStarted.vue';
 // @ts-ignore
 import Install from './views/Install.vue';
-
+import { h } from 'vue';
+// @ts-ignore
+import Markdown from './components/Markdown.vue'
 
 const history = createWebHashHistory();
 export const router = createRouter({
@@ -28,9 +30,9 @@ export const router = createRouter({
     {path:'/', component: Home},
     {path:'/doc', component: Doc,children: [
       { path: "", component: DocDemo }, // 二级组件的根路由
-      {path: "intro", component: Intro },
-      {path: "install", component: Install },
-      {path: "get-started", component: GetStarted },
+      {path: "intro", component: h(Markdown,{path:'../markdown/intro.md'}) },
+      {path: "install", component: h(Markdown,{path:'../markdown/install.md'}) },
+      {path: "get-started", component: h(Markdown,{path:'../markdown/get-started.md'}) },
       { path: "switch", component: SwitchDemo },
       { path: "button", component: ButtonDemo },
       { path: "dialog", component: DialogDemo },
