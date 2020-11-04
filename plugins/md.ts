@@ -5,17 +5,6 @@ import marked from 'marked'
 
 
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// 请注意，当前文件的后缀从 .js 改为了 .ts
-// 如果你看到这行注释，请确认文件后缀是 .ts
-// 然后就可以删掉本注释了!!!!!!!!!!!!!!!!
-
-
-
-
-
-
-
 const mdToJs = str => {
   const content = JSON.stringify(marked(str));
   return `export default ${content}`
@@ -23,7 +12,7 @@ const mdToJs = str => {
 
 export function md() {
   return {
-    configureServer: [ // 用于开发
+    configureServer: [ // 用于开发, koa
       async ({ app }) => {
         app.use(async (ctx, next) => { // koa
           if (ctx.path.endsWith('.md')) {
