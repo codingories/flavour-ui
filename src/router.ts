@@ -23,6 +23,8 @@ import { h } from 'vue';
 // @ts-ignore
 import Markdown from './components/Markdown.vue'
 
+const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename });
+
 const history = createWebHashHistory();
 export const router = createRouter({
   history:history,
@@ -30,9 +32,9 @@ export const router = createRouter({
     {path:'/', component: Home},
     {path:'/doc', component: Doc,children: [
       { path: "", component: DocDemo }, // 二级组件的根路由
-      {path: "intro", component: h(Markdown,{path:'../markdown/intro.md'}) },
-      {path: "install", component: h(Markdown,{path:'../markdown/install.md'}) },
-      {path: "get-started", component: h(Markdown,{path:'../markdown/get-started.md'}) },
+      {path: "intro", component: md('intro') },
+      {path: "install", component: md('install')},
+      {path: "get-started", component: md('get-started')},
       { path: "switch", component: SwitchDemo },
       { path: "button", component: ButtonDemo },
       { path: "dialog", component: DialogDemo },
