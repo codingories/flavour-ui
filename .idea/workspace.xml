@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53612160-8eea-4ebc-80be-0da6f8976cea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TabsDemo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabsDemo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Tabs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Topnav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Topnav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,14 +18,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/lib/Switch.vue" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/lib/Button.vue" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/lib/openDialog.ts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/lib/Dialog.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/views/Doc.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/views/Home.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/lib/openDialog.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/lib/Switch.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/App.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/lib/Tabs.vue" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/views/Home.vue" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/views/Doc.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/lib/Button.vue" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1hl4fpzXoFTs6Sz9tnpElYu1Cyq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -85,6 +87,7 @@
       <workItem from="1601947841778" duration="6193000" />
       <workItem from="1601960361070" duration="3250000" />
       <workItem from="1602033128980" duration="13981000" />
+      <workItem from="1605185622580" duration="817000" />
     </task>
     <servers />
   </component>
