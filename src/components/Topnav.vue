@@ -16,13 +16,16 @@
       const menuVisible =  inject<Ref<boolean>>('menuVisible'); // get, 获取xxx
       const toggleMenu = ()=>{
         menuVisible.value = !menuVisible.value
+        console.log('fuck',menuVisible.value)
       };
       return {toggleMenu}
     }
   }
 </script>
 <style lang="scss" scoped>
+  $color: #007974;
   .topnav {
+    color: $color;
     display: flex;
     padding: 16px;
     position: fixed;
