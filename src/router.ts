@@ -13,6 +13,13 @@ import DialogDemo from "./components/DialogDemo.vue";
 import TabsDemo from "./components/TabsDemo.vue";
 // @ts-ignore
 import DocDemo from "./components/DocDemo.vue";
+// @ts-ignore
+import Intro from './views/Intro.vue';
+// @ts-ignore
+import GetStarted from './views/GetStarted.vue';
+// @ts-ignore
+import Install from './views/Install.vue';
+
 
 const history = createWebHashHistory();
 export const router = createRouter({
@@ -20,13 +27,15 @@ export const router = createRouter({
   routes: [
     {path:'/', component: Home},
     {path:'/doc', component: Doc,children: [
-      { path: "", component: DocDemo }, // 二级组件的根路由
-      { path: "switch", component: SwitchDemo },
-      { path: "button", component: ButtonDemo },
-      { path: "dialog", component: DialogDemo },
-      { path: "tabs", component: TabsDemo }
-    ],
+        { path: "", component: DocDemo }, // 二级组件的根路由
+        {path: "intro", component: Intro },
+        {path: "install", component: Install },
+        {path: "get-started", component: GetStarted },
+        { path: "switch", component: SwitchDemo },
+        { path: "button", component: ButtonDemo },
+        { path: "dialog", component: DialogDemo },
+        { path: "tabs", component: TabsDemo }
+      ],
     }
   ]
 });
-
