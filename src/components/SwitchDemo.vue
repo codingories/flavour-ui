@@ -3,31 +3,26 @@
     <h1>Switch 组件示例 </h1>
     <div class="demo">
       <h2>常规用法</h2>
-<!--      <Switch1Demo />-->
       <div class="demo-component">
         <Switch1Demo />
-<!--        <Switch v-model:value="bool" />-->
         <div class="demo-actions">
           <Button>查看代码</Button>
         </div>
         <div class="demo-code">
-          <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
+          <pre>{{Switch1Demo.__sourceCode}}</pre>
         </div>
       </div>
-
     </div>
     <div class="demo">
       <h2>支持 disabled </h2>
       <div class="demo-component">
         <Switch2Demo />
-
-        <!--        <Switch v-model:value="bool" disabled />-->
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>&lt;Switch v-model:value="bool" disabled /&gt;</pre>
+        <pre>{{Switch2Demo.__sourceCode}}</pre>
       </div>
     </div>
   </div>
@@ -38,7 +33,7 @@
   import Button from '../lib/Button.vue'
   import Switch1Demo from './Switch1.demo.vue'
   import Switch2Demo from './Switch2.demo.vue'
-
+  console.log('Switch1Demo--->',Switch1Demo)
   import {
     ref
   } from 'vue'
@@ -50,9 +45,9 @@
       Button
     },
     setup() {
-      const bool = ref(false)
+      const bool = ref(false);
       return {
-        bool
+        bool,Switch1Demo,Switch2Demo
       }
     }
   }
