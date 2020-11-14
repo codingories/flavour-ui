@@ -12,8 +12,6 @@ import DialogDemo from "./components/DialogDemo.vue";
 // @ts-ignore
 import TabsDemo from "./components/TabsDemo.vue";
 // @ts-ignore
-import DocDemo from "./components/DocDemo.vue";
-// @ts-ignore
 import Intro from './views/Intro.vue';
 // @ts-ignore
 import GetStarted from './views/GetStarted.vue';
@@ -31,7 +29,7 @@ export const router = createRouter({
   routes: [
     {path:'/', component: Home},
     {path:'/doc', component: Doc,children: [
-        { path: "", component: DocDemo }, // 二级组件的根路由
+        { path: "", redirect: '/doc/intro' }, // 二级组件的根路由
         {path: "intro", component: md('intro') },
         {path: "install", component: md('install')},
         {path: "get-started", component: md('get-started')},
