@@ -1,9 +1,9 @@
-// @ts-nocheck
 // @ts-ignore
 import path from 'path'
 // @ts-ignore
 import fs from 'fs'
 import marked from 'marked'
+
 
 
 const mdToJs = str => {
@@ -13,7 +13,7 @@ const mdToJs = str => {
 
 export function md() {
   return {
-    configureServer: [ // 用于开发
+    configureServer: [ // 用于开发, koa
       async ({ app }) => {
         app.use(async (ctx, next) => { // koa
           if (ctx.path.endsWith('.md')) {
