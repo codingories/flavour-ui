@@ -11,17 +11,16 @@ import ButtonDemo from "./components/ButtonDemo.vue";
 import DialogDemo from "./components/DialogDemo.vue";
 // @ts-ignore
 import TabsDemo from "./components/TabsDemo.vue";
-// @ts-ignore
-import Intro from './views/Intro.vue';
-// @ts-ignore
-import GetStarted from './views/GetStarted.vue';
-// @ts-ignore
-import Install from './views/Install.vue';
 import { h } from 'vue';
 // @ts-ignore
 import Markdown from './components/Markdown.vue'
+// @ts-ignore
+import intro from './markdown/intro.md'
+import getStarted from './markdown/get-started.md'
+// @ts-ignore
+import install from './markdown/install.md'
 
-const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename });
+const md = string => h(Markdown, { content: string, key: string });
 
 const history = createWebHashHistory();
 export const router = createRouter({
@@ -30,9 +29,9 @@ export const router = createRouter({
     {path:'/', component: Home},
     {path:'/doc', component: Doc,children: [
         { path: "", redirect: '/doc/intro' }, // 二级组件的根路由
-        {path: "intro", component: md('intro') },
-        {path: "install", component: md('install')},
-        {path: "get-started", component: md('get-started')},
+        {path: "intro", component: md(intro) },
+        {path: "install", component: md(install)},
+        {path: "get-started", component: md(getStarted)},
         { path: "switch", component: SwitchDemo },
         { path: "button", component: ButtonDemo },
         { path: "dialog", component: DialogDemo },

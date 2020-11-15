@@ -1,6 +1,12 @@
 // shims-vue.d.ts
+
 declare module '*.vue' {
-  import { Component } from 'vue'
-  const component: Component;
-  export default component
+  import { ComponentOptions } from 'vue'
+  const ComponentOptions: ComponentOptions;
+  export default ComponentOptions
+}
+
+declare module '*.md' {
+  const str: string;
+  export default str;
 }
