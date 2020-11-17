@@ -9,4 +9,4 @@ export { default as Tab } from './Tab.vue'
 // @ts-ignore
 export { default as Dialog } from './Dialog.vue'
 // @ts-ignore
-export { openDialog as openDialog } from './openDialog.vue'
+export { openDialog as openDialog } from './openDialog'
