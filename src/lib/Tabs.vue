@@ -6,7 +6,6 @@
     </div>
     <div class="gulu-tabs-content">
       <component class="gulu-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults" :is="c" />
-
     </div>
   </div>
 </template>
